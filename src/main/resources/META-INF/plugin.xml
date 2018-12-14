@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>org.bakasa.projects.laravelartisanplugin</id>
+    <name>Laravel Artisan Menu</name>
+    <vendor email="bakasaru@list.ru" url="https://vk.com/bakasa">Nick Andreev</vendor>
+    <version>0.1.0</version>
+
+    <description><![CDATA[
+    Plugin for Laravel projects which allows to run Artisan commands from menu
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
