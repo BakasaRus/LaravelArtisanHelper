@@ -21,7 +21,13 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 intellij {
-    version '2018.3.1'
+    version 'IU-2018.3.1'
+    plugins = [
+            "com.jetbrains.php:183.4588.67",
+            'CSS',
+            'java-i18n',
+            'properties'
+    ]
 }
 patchPluginXml {
     changeNotes """
