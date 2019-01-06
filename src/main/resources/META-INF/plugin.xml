@@ -24,7 +24,7 @@
         <group id="Artisan.Make" text="Make..." description="Make (i.e. create) files from template" popup="true">
             <add-to-group group-id="Artisan.Menu" anchor="first"/>
             <action id="Artisan.Make.Controller" class="laravel.artisan.actions.MakeController" text="Controller" description="Create a new controller class"/>
-            <action id="Artisan.Make.Model" class="laravel.artisan.actions.Test" text="Model" description="Create a new Eloquent model class"/>
+            <action id="Artisan.Make.Model" class="laravel.artisan.actions.MakeModel" text="Model" description="Create a new Eloquent model class"/>
             <action id="Artisan.Make.Migration" class="laravel.artisan.actions.Test" text="Migration" description="Create a new migration file"/>
             <action id="Artisan.Make.Event" class="laravel.artisan.actions.Test" text="Event" description="Create a new event class"/>
             <action id="Artisan.Make.Listener" class="laravel.artisan.actions.Test" text="Listener" description="Create a new event listener class"/>

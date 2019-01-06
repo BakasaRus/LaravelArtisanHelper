@@ -4,7 +4,7 @@ import javax.swing.*
 import java.awt.event.*
 import laravel.artisan.runCommand
 
-class MakeController : JDialog() {
+class MakeControllerDialog : JDialog() {
     private var contentPane: JPanel? = null
     private var buttonOK: JButton? = null
     private var buttonCancel: JButton? = null
@@ -59,11 +59,12 @@ class MakeController : JDialog() {
 
         @JvmStatic
         fun main(workingDir: String?) {
-            val dialog = MakeController()
+            val dialog = MakeControllerDialog()
             dialog.workingDir = workingDir
+            dialog.title = "Make a controller"
             dialog.pack()
+            dialog.setLocationRelativeTo(null)
             dialog.isVisible = true
-            // System.exit(0)
         }
     }
 }
