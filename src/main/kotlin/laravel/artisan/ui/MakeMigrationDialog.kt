@@ -20,10 +20,10 @@ class MakeMigrationDialog : JDialog() {
         isModal = true
         getRootPane().defaultButton = buttonOK
 
+        migrationName!!.requestFocus()
+
         buttonOK!!.addActionListener { onOK() }
-
         buttonCancel!!.addActionListener { onCancel() }
-
         actionSelect!!.addActionListener { onChangeAction() }
 
         // call onCancel() when cross is clicked
@@ -39,6 +39,12 @@ class MakeMigrationDialog : JDialog() {
             { onCancel() },
             KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
             JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT
+        )
+
+        migrationName!!.registerKeyboardAction(
+            { onOK() },
+            KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0),
+            JComponent.WHEN_FOCUSED
         )
     }
 
