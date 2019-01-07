@@ -1,5 +1,6 @@
 package laravel.artisan.ui
 
+import com.intellij.openapi.ui.Messages
 import laravel.artisan.runCommand
 import javax.swing.*
 import java.awt.event.*
@@ -44,6 +45,11 @@ class MakeModelDialog : JDialog() {
     }
 
     private fun onOK() {
+        if (modelName!!.text == "") {
+            Messages.showMessageDialog(this, "Model name should be specified", "Error", Messages.getErrorIcon())
+            return
+        }
+
         var command: String = "php artisan make:model --no-interaction " + modelName!!.text
         if (migrationCheckBox!!.isSelected)
             command += " --migration"

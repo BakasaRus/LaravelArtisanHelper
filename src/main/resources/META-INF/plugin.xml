@@ -2,7 +2,7 @@
     <id>org.bakasa.projects.laravelartisanplugin</id>
     <name>Laravel Artisan Menu</name>
     <vendor email="bakasaru@list.ru" url="https://vk.com/bakasa">Nick Andreev</vendor>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 
     <description><![CDATA[
     Plugin for fast Laravel classes creation
