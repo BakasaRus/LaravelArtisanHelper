@@ -6,6 +6,8 @@ import laravel.artisan.ui.MakeControllerDialog as Dialog
 
 class MakeController : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        Dialog.main(e.project?.basePath)
+        val dialog = Dialog(e.project)
+        dialog.title = "Make a controller"
+        dialog.show()
     }
 }

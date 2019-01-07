@@ -40,12 +40,6 @@ class MakeMigrationDialog : JDialog() {
             KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
             JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT
         )
-
-        migrationName!!.registerKeyboardAction(
-            { onOK() },
-            KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0),
-            JComponent.WHEN_FOCUSED
-        )
     }
 
     private fun onChangeAction() {
