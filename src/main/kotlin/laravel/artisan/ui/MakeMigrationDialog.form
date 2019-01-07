@@ -63,7 +63,7 @@
             </constraints>
             <properties>
               <labelFor value="eeb77"/>
-              <text value="Migration name"/>
+              <text value="&amp;Migration name"/>
             </properties>
           </component>
           <component id="eeb77" class="javax.swing.JTextField" binding="migrationName">
@@ -80,7 +80,7 @@
             </constraints>
             <properties>
               <labelFor value="4bf31"/>
-              <text value="Type"/>
+              <text value="T&amp;ype"/>
             </properties>
           </component>
           <component id="4bf31" class="javax.swing.JComboBox" binding="actionSelect">
@@ -101,7 +101,7 @@
             </constraints>
             <properties>
               <labelFor value="83"/>
-              <text value="Table name"/>
+              <text value="&amp;Table name"/>
             </properties>
           </component>
           <component id="83" class="javax.swing.JTextField" binding="tableName">
@@ -110,7 +110,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <enabled value="false"/>
+            </properties>
           </component>
         </children>
       </grid>

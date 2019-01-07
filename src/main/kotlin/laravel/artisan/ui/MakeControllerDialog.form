@@ -63,7 +63,7 @@
             </constraints>
             <properties>
               <labelFor value="88d04"/>
-              <text value="Controller name"/>
+              <text value="&amp;Controller name"/>
             </properties>
           </component>
           <component id="88d04" class="javax.swing.JTextField" binding="controllerName">
@@ -79,7 +79,8 @@
               <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Create resource controller"/>
+              <selected value="true"/>
+              <text value="Create &amp;resource controller"/>
             </properties>
           </component>
           <component id="eb83a" class="javax.swing.JLabel">
@@ -87,7 +88,8 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Model name"/>
+              <labelFor value="df344"/>
+              <text value="&amp;Model name"/>
             </properties>
           </component>
           <component id="df344" class="javax.swing.JTextField" binding="modelName">

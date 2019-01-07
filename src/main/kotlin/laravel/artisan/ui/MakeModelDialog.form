@@ -62,7 +62,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Model name"/>
+              <labelFor value="2c263"/>
+              <text value="Model &amp;name"/>
             </properties>
           </component>
           <component id="2c263" class="javax.swing.JTextField" binding="modelName">
@@ -80,7 +81,7 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Create a controller"/>
+          <text value="Create a &amp;controller"/>
         </properties>
       </component>
       <component id="7b401" class="javax.swing.JCheckBox" binding="resControllerCheckBox">
@@ -88,7 +89,8 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Create a resource controller"/>
+          <selected value="true"/>
+          <text value="Create a &amp;resource controller"/>
         </properties>
       </component>
       <component id="65ab7" class="javax.swing.JCheckBox" binding="factoryCheckBox">
@@ -96,7 +98,8 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Create a factory"/>
+          <selected value="true"/>
+          <text value="Create a &amp;factory"/>
         </properties>
       </component>
       <component id="f536" class="javax.swing.JCheckBox" binding="migrationCheckBox">
@@ -104,7 +107,8 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Create a migration"/>
+          <selected value="true"/>
+          <text value="Create a &amp;migration"/>
         </properties>
       </component>
       <component id="abffe" class="javax.swing.JCheckBox" binding="pivotCheckBox">
@@ -112,7 +116,7 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Is it a custom Pivot?"/>
+          <text value="Is it a custom &amp;pivot model?"/>
         </properties>
       </component>
       <component id="244cd" class="javax.swing.JCheckBox" binding="forceCheckBox">
@@ -120,7 +124,7 @@
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Force creation"/>
+          <text value="F&amp;orce creation"/>
         </properties>
       </component>
     </children>
