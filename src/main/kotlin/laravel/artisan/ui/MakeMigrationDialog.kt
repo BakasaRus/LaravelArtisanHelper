@@ -1,11 +1,14 @@
 package laravel.artisan.ui
 
+import javax.swing.*
+import com.intellij.notification.Notification
+import com.intellij.notification.NotificationType
+import com.intellij.notification.Notifications
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.ValidationInfo
 import laravel.artisan.TypeChooser
 import laravel.artisan.runCommand
-import javax.swing.*
 
 class MakeMigrationDialog(private var project: Project?) : DialogWrapper(project) {
     private var contentPanel: JPanel? = null
@@ -46,7 +49,12 @@ class MakeMigrationDialog(private var project: Project?) : DialogWrapper(project
             1 -> command += " --table=" + tableName!!.text
             2 -> command += " --create=" + tableName!!.text
         }
-        command.runCommand(project?.basePath)
+
+        val result = command.runCommand(project?.basePath)
+
+        Notifications.Bus.notify(
+            Notification("laravel", "Success", result!!, NotificationType.INFORMATION)
+        )
         super.doOKAction()
     }
 }

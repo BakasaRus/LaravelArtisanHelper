@@ -1,12 +1,13 @@
 package laravel.artisan.ui
 
+import javax.swing.*
+import com.intellij.notification.Notification
+import com.intellij.notification.NotificationType
+import com.intellij.notification.Notifications
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
-import com.intellij.openapi.ui.Messages
 import com.intellij.openapi.ui.ValidationInfo
 import laravel.artisan.runCommand
-import javax.swing.*
-import java.awt.event.*
 
 class MakeModelDialog(private var project: Project?) : DialogWrapper(project) {
     private var contentPanel: JPanel? = null
@@ -52,7 +53,12 @@ class MakeModelDialog(private var project: Project?) : DialogWrapper(project) {
             command += " --pivot"
         if (forceCheckBox!!.isSelected)
             command += " --force"
-        command.runCommand(project?.basePath)
+
+        val result = command.runCommand(project?.basePath)
+
+        Notifications.Bus.notify(
+            Notification("laravel", "Success", result!!, NotificationType.INFORMATION)
+        )
         super.doOKAction()
     }
 }

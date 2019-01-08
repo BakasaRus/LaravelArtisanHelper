@@ -1,10 +1,13 @@
 package laravel.artisan.ui
 
+import javax.swing.*
+import com.intellij.notification.Notification
+import com.intellij.notification.NotificationType
+import com.intellij.notification.Notifications
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.ValidationInfo
 import laravel.artisan.TypeChooser
-import javax.swing.*
 import laravel.artisan.runCommand
 
 class MakeControllerDialog(private var project: Project?) : DialogWrapper(project) {
@@ -46,7 +49,11 @@ class MakeControllerDialog(private var project: Project?) : DialogWrapper(projec
             1 -> command += " --resource"
             2 -> command += " --model=" + modelName!!.text
         }
-        command.runCommand(project?.basePath)
+        val result = command.runCommand(project?.basePath)
+
+        Notifications.Bus.notify(
+            Notification("laravel", "Success", result!!, NotificationType.INFORMATION)
+        )
         super.doOKAction()
     }
 }
