@@ -21,14 +21,14 @@
             <action id="Artisan.Make.Controller" class="laravel.artisan.actions.MakeController" text="Controller" description="Create a new controller class" icon="/icons/logo.png"/>
             <action id="Artisan.Make.Model" class="laravel.artisan.actions.MakeModel" text="Model" description="Create a new Eloquent model class" icon="/icons/logo.png"/>
             <action id="Artisan.Make.Migration" class="laravel.artisan.actions.MakeMigration" text="Migration" description="Create a new migration file" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Event" class="laravel.artisan.actions.Test" text="Event" description="Create a new event class" icon="/icons/logo.png"/>
+            <action id="Artisan.Make.Event" class="laravel.artisan.actions.MakeEvent" text="Event" description="Create a new event class" icon="/icons/logo.png"/>
             <action id="Artisan.Make.Listener" class="laravel.artisan.actions.Test" text="Listener" description="Create a new event listener class" icon="/icons/logo.png"/>
             <action id="Artisan.Make.Job" class="laravel.artisan.actions.Test" text="Job" description="Create a new job listener class" icon="/icons/logo.png"/>
             <action id="Artisan.Make.Mail" class="laravel.artisan.actions.Test" text="Mail" description="Create a new email class" icon="/icons/logo.png"/>
             <action id="Artisan.Make.Middleware" class="laravel.artisan.actions.Test" text="Middleware" description="Create a new middleware file" icon="/icons/logo.png"/>
             <action id="Artisan.Make.Test" class="laravel.artisan.actions.Test" text="Test" description="Create a new test class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Seeder" class="laravel.artisan.actions.Test" text="Listener" description="Create a new seeder class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Factory" class="laravel.artisan.actions.Test" text="Job" description="Create a new model factory" icon="/icons/logo.png"/>
+            <action id="Artisan.Make.Seeder" class="laravel.artisan.actions.Test" text="Seeder" description="Create a new seeder class" icon="/icons/logo.png"/>
+            <action id="Artisan.Make.Factory" class="laravel.artisan.actions.Test" text="Factory" description="Create a new model factory" icon="/icons/logo.png"/>
         </group>
     </actions>
 </idea-plugin>
