@@ -1,14 +1,15 @@
 package laravel.artisan.ui
 
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.Messages
+import com.intellij.openapi.ui.ValidationInfo
 import laravel.artisan.runCommand
 import javax.swing.*
 import java.awt.event.*
 
-class MakeModelDialog : JDialog() {
-    private var contentPane: JPanel? = null
-    private var buttonOK: JButton? = null
-    private var buttonCancel: JButton? = null
+class MakeModelDialog(private var project: Project?) : DialogWrapper(project) {
+    private var contentPanel: JPanel? = null
     private var modelName: JTextField? = null
     private var migrationCheckBox: JCheckBox? = null
     private var factoryCheckBox: JCheckBox? = null
@@ -17,39 +18,27 @@ class MakeModelDialog : JDialog() {
     private var pivotCheckBox: JCheckBox? = null
     private var forceCheckBox: JCheckBox? = null
 
-    private var workingDir: String? = ""
-
     init {
-        setContentPane(contentPane)
-        isModal = true
-        getRootPane().defaultButton = buttonOK
-
-        buttonOK!!.addActionListener { onOK() }
-
-        buttonCancel!!.addActionListener { onCancel() }
-
-        // call onCancel() when cross is clicked
-        defaultCloseOperation = WindowConstants.DO_NOTHING_ON_CLOSE
-        addWindowListener(object : WindowAdapter() {
-            override fun windowClosing(e: WindowEvent?) {
-                onCancel()
-            }
-        })
-
-        // call onCancel() on ESCAPE
-        contentPane!!.registerKeyboardAction(
-            { onCancel() },
-            KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
-            JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT
-        )
+        init()
     }
 
-    private fun onOK() {
-        if (modelName!!.text == "") {
-            Messages.showMessageDialog(this, "Model name should be specified", "Error", Messages.getErrorIcon())
-            return
-        }
+    override fun createCenterPanel(): JComponent? {
+        return contentPanel
+    }
 
+    override fun getPreferredFocusedComponent(): JComponent? {
+        return modelName
+    }
+
+    override fun doValidate(): ValidationInfo? {
+        val emptyModelName = modelName!!.text == ""
+        return when {
+            emptyModelName -> ValidationInfo("Model name should be specified", modelName)
+            else -> null
+        }
+    }
+
+    override fun doOKAction() {
         var command: String = "php artisan make:model --no-interaction " + modelName!!.text
         if (migrationCheckBox!!.isSelected)
             command += " --migration"
@@ -63,25 +52,7 @@ class MakeModelDialog : JDialog() {
             command += " --pivot"
         if (forceCheckBox!!.isSelected)
             command += " --force"
-        command.runCommand(workingDir)
-        dispose()
-    }
-
-    private fun onCancel() {
-        // add your code here if necessary
-        dispose()
-    }
-
-    companion object {
-
-        @JvmStatic
-        fun main(workingDir: String?) {
-            val dialog = MakeModelDialog()
-            dialog.workingDir = workingDir
-            dialog.title = "Make a model"
-            dialog.pack()
-            dialog.setLocationRelativeTo(null)
-            dialog.isVisible = true
-        }
+        command.runCommand(project?.basePath)
+        super.doOKAction()
     }
 }
