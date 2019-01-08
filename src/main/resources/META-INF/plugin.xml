@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>org.bakasa.projects.laravelartisanplugin</id>
-    <name>Laravel Artisan Menu</name>
+    <name>Laravel Classes Creator</name>
     <vendor email="bakasaru@list.ru" url="https://vk.com/bakasa">Nick Andreev</vendor>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 
     <description><![CDATA[
     Plugin for fast Laravel classes creation
@@ -16,19 +16,91 @@
     </extensions>
 
     <actions>
-        <group id="Artisan.Make" text="Laravel Class" description="Create Laravel classes with Artisan" popup="true" icon="/icons/logo.png">
-            <add-to-group group-id="NewGroup" anchor="first"/>
-            <action id="Artisan.Make.Controller" class="laravel.artisan.actions.MakeController" text="Controller" description="Create a new controller class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Model" class="laravel.artisan.actions.MakeModel" text="Model" description="Create a new Eloquent model class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Migration" class="laravel.artisan.actions.MakeMigration" text="Migration" description="Create a new migration file" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Event" class="laravel.artisan.actions.MakeEvent" text="Event" description="Create a new event class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Listener" class="laravel.artisan.actions.MakeListener" text="Listener" description="Create a new event listener class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Job" class="laravel.artisan.actions.Test" text="Job" description="Create a new job class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Mail" class="laravel.artisan.actions.Test" text="Mail" description="Create a new email class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Middleware" class="laravel.artisan.actions.Test" text="Middleware" description="Create a new middleware file" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Test" class="laravel.artisan.actions.Test" text="Test" description="Create a new test class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Seeder" class="laravel.artisan.actions.Test" text="Seeder" description="Create a new seeder class" icon="/icons/logo.png"/>
-            <action id="Artisan.Make.Factory" class="laravel.artisan.actions.Test" text="Factory" description="Create a new model factory" icon="/icons/logo.png"/>
+        <group
+                id="Artisan.Make"
+                text="Laravel Class"
+                description="Create Laravel classes with Artisan"
+                popup="true"
+                icon="/icons/logo.png"
+        >
+            <add-to-group
+                    group-id="NewGroup"
+                    anchor="first"
+            />
+            <action
+                    id="Artisan.Make.Model"
+                    class="laravel.artisan.actions.MakeModel"
+                    text="&amp;Model"
+                    description="Create a new Eloquent model class"
+            />
+            <action
+                    id="Artisan.Make.Controller"
+                    class="laravel.artisan.actions.MakeController"
+                    text="&amp;Controller"
+                    description="Create a new controller class"
+            />
+            <action
+                    id="Artisan.Make.Migration"
+                    class="laravel.artisan.actions.MakeMigration"
+                    text="M&amp;igration"
+                    description="Create a new migration file"
+            />
+            <action
+                    id="Artisan.Make.Factory"
+                    class="laravel.artisan.actions.Test"
+                    text="&amp;Factory"
+                    description="Create a new model factory"
+            />
+            <separator/>
+            <action
+                    id="Artisan.Make.Event"
+                    class="laravel.artisan.actions.MakeEvent"
+                    text="&amp;Event"
+                    description="Create a new event class"
+            />
+            <action
+                    id="Artisan.Make.Listener"
+                    class="laravel.artisan.actions.MakeListener"
+                    text="&amp;Listener"
+                    description="Create a new event listener class"
+            />
+            <action
+                    id="Artisan.Make.Job"
+                    class="laravel.artisan.actions.Test"
+                    text="&amp;Job"
+                    description="Create a new job class"
+            />
+            <action
+                    id="Artisan.Event.Generate"
+                    class="laravel.artisan.actions.Test"
+                    text="&amp;Generate events and listeners"
+                    description="Generate the missing events and listeners based on registration"
+            />
+            <separator/>
+            <action
+                    id="Artisan.Make.Middleware"
+                    class="laravel.artisan.actions.Test"
+                    text="Mi&amp;ddleware"
+                    description="Create a new middleware file"
+            />
+            <action
+                    id="Artisan.Make.Mail"
+                    class="laravel.artisan.actions.Test"
+                    text="M&amp;ail"
+                    description="Create a new email class"
+            />
+            <action
+                    id="Artisan.Make.Test"
+                    class="laravel.artisan.actions.Test"
+                    text="&amp;Test"
+                    description="Create a new test class"
+            />
+            <action
+                    id="Artisan.Make.Seeder"
+                    class="laravel.artisan.actions.Test"
+                    text="&amp;Seeder"
+                    description="Create a new seeder class"
+            />
         </group>
     </actions>
 </idea-plugin>
