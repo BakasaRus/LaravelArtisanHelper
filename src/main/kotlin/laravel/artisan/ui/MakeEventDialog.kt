@@ -34,7 +34,7 @@ class MakeEventDialog(private var project: Project?) : DialogWrapper(project) {
     }
 
     override fun doOKAction() {
-        var command = "php artisan make:event " + eventName!!.text
+        var command = "php artisan make:event --no-interaction " + eventName!!.text
         val result = command.runCommand(project?.basePath)
 
         Notifications.Bus.notify(

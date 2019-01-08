@@ -38,7 +38,7 @@ class MakeListenerDialog(private var project: Project?) : DialogWrapper(project)
     }
 
     override fun doOKAction() {
-        var command = "php artisan make:listener " + listenerName!!.text + " --event=" + eventName!!.text
+        var command = "php artisan make:listener --no-interaction " + listenerName!!.text + " --event=" + eventName!!.text
         if (queuedCheckBox!!.isSelected)
             command += " --queued"
 
