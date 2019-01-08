@@ -6,6 +6,8 @@ import laravel.artisan.ui.MakeMigrationDialog as Dialog
 
 class MakeMigration : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        Dialog.main(e.project?.basePath)
+        val dialog = Dialog(e.project)
+        dialog.title = "Make a migration"
+        dialog.show()
     }
 }
