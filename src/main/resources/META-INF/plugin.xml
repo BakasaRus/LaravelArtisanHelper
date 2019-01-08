@@ -72,7 +72,7 @@
             />
             <action
                     id="Artisan.Event.Generate"
-                    class="laravel.artisan.actions.Test"
+                    class="laravel.artisan.actions.EventGenerate"
                     text="&amp;Generate events and listeners"
                     description="Generate the missing events and listeners based on registration"
             />
