@@ -93,7 +93,7 @@
             <separator/>
             <action
                     id="Artisan.Make.Middleware"
-                    class="laravel.artisan.actions.Test"
+                    class="laravel.artisan.actions.MakeMiddleware"
                     text="Mi&amp;ddleware"
                     description="Create a new middleware file"
             />
