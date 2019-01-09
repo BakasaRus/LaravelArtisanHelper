@@ -86,7 +86,7 @@
             />
             <action
                     id="Artisan.Make.Mail"
-                    class="laravel.artisan.actions.Test"
+                    class="laravel.artisan.actions.MakeMail"
                     text="M&amp;ail"
                     description="Create a new email class"
             />
