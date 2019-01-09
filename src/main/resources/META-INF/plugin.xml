@@ -1,11 +1,12 @@
 <idea-plugin>
     <id>org.bakasa.projects.laravelartisanplugin</id>
-    <name>Laravel Classes Creator</name>
+    <name>Laravel Artisan Helper</name>
     <vendor email="bakasaru@list.ru" url="https://vk.com/bakasa">Nick Andreev</vendor>
     <version>0.1.2</version>
 
     <description><![CDATA[
-    Plugin for fast Laravel classes creation
+    <p>Plugin for faster access to Laravel Artisan actions.</p>
+    <p>Now it supports only classes creation. In future it will provide most of Artisan commands and special support for migrations and queues.</p>
     ]]></description>
 
     <depends>com.jetbrains.php</depends>
