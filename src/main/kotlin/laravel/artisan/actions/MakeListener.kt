@@ -7,7 +7,7 @@ import laravel.artisan.ui.MakeListenerDialog as Dialog
 class MakeListener : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
         val dialog = Dialog(e.project)
-        dialog.title = "Make a model"
+        dialog.title = "New Laravel Event Listener"
         dialog.show()
     }
 }

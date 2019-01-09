@@ -7,7 +7,7 @@ import laravel.artisan.ui.MakeModelDialog as Dialog
 class MakeModel : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
         val dialog = Dialog(e.project)
-        dialog.title = "Make a model"
+        dialog.title = "New Laravel Eloquent Model"
         dialog.show()
     }
 }
