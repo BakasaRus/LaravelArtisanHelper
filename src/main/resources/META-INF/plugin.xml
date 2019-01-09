@@ -105,7 +105,7 @@
             />
             <action
                     id="Artisan.Make.Seeder"
-                    class="laravel.artisan.actions.Test"
+                    class="laravel.artisan.actions.MakeSeeder"
                     text="&amp;Seeder"
                     description="Create a new seeder class"
             />
