@@ -48,7 +48,7 @@
             />
             <action
                     id="Artisan.Make.Factory"
-                    class="laravel.artisan.actions.Test"
+                    class="laravel.artisan.actions.MakeFactory"
                     text="&amp;Factory"
                     description="Create a new model factory"
             />
