@@ -38,7 +38,7 @@ class MakeEventDialog(private var project: Project?) : DialogWrapper(project) {
         val result = command.runCommand(project?.basePath)
 
         Notifications.Bus.notify(
-            Notification("laravel", "Success", result!!, NotificationType.INFORMATION)
+            Notification("laravel", "Laravel Artisan", result!!, NotificationType.INFORMATION)
         )
         super.doOKAction()
     }

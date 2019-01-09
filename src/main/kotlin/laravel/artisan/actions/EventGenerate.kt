@@ -13,7 +13,7 @@ class EventGenerate : AnAction() {
         val result = command.runCommand(e.project?.basePath)
 
         Notifications.Bus.notify(
-            Notification("laravel", "Success", result!!, NotificationType.INFORMATION)
+            Notification("laravel", "Laravel Artisan", result!!, NotificationType.INFORMATION)
         )
     }
 }
