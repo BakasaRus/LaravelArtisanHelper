@@ -79,16 +79,23 @@
             />
             <separator/>
             <action
-                    id="Artisan.Make.Middleware"
-                    class="laravel.artisan.actions.Test"
-                    text="Mi&amp;ddleware"
-                    description="Create a new middleware file"
-            />
-            <action
                     id="Artisan.Make.Mail"
                     class="laravel.artisan.actions.MakeMail"
                     text="M&amp;ail"
                     description="Create a new email class"
+            />
+            <action
+                    id="Artisan.Make.Notification"
+                    class="laravel.artisan.actions.MakeNotification"
+                    text="&amp;Notification"
+                    description="Create a new notification class"
+            />
+            <separator/>
+            <action
+                    id="Artisan.Make.Middleware"
+                    class="laravel.artisan.actions.Test"
+                    text="Mi&amp;ddleware"
+                    description="Create a new middleware file"
             />
             <action
                     id="Artisan.Make.Test"
