@@ -99,7 +99,7 @@
             />
             <action
                     id="Artisan.Make.Test"
-                    class="laravel.artisan.actions.Test"
+                    class="laravel.artisan.actions.MakeTest"
                     text="&amp;Test"
                     description="Create a new test class"
             />
