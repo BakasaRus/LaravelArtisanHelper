@@ -31,82 +31,82 @@
             <action
                     id="Artisan.Make.Model"
                     class="laravel.artisan.actions.MakeModel"
-                    text="&amp;Model"
+                    text="_Model"
                     description="Create a new Eloquent model class"
             />
             <action
                     id="Artisan.Make.Controller"
                     class="laravel.artisan.actions.MakeController"
-                    text="&amp;Controller"
+                    text="_Controller"
                     description="Create a new controller class"
             />
             <action
                     id="Artisan.Make.Migration"
                     class="laravel.artisan.actions.MakeMigration"
-                    text="M&amp;igration"
+                    text="M_igration"
                     description="Create a new migration file"
             />
             <action
                     id="Artisan.Make.Factory"
                     class="laravel.artisan.actions.MakeFactory"
-                    text="&amp;Factory"
+                    text="_Factory"
                     description="Create a new model factory"
             />
             <separator/>
             <action
                     id="Artisan.Make.Event"
                     class="laravel.artisan.actions.MakeEvent"
-                    text="&amp;Event"
+                    text="_Event"
                     description="Create a new event class"
             />
             <action
                     id="Artisan.Make.Listener"
                     class="laravel.artisan.actions.MakeListener"
-                    text="&amp;Listener"
+                    text="_Listener"
                     description="Create a new event listener class"
             />
             <action
                     id="Artisan.Make.Job"
                     class="laravel.artisan.actions.MakeJob"
-                    text="&amp;Job"
+                    text="_Job"
                     description="Create a new job class"
             />
             <action
                     id="Artisan.Event.Generate"
                     class="laravel.artisan.actions.EventGenerate"
-                    text="&amp;Generate events and listeners"
+                    text="_Generate events and listeners"
                     description="Generate the missing events and listeners based on registration"
             />
             <separator/>
             <action
                     id="Artisan.Make.Mail"
                     class="laravel.artisan.actions.MakeMail"
-                    text="M&amp;ail"
+                    text="M_ail"
                     description="Create a new email class"
             />
             <action
                     id="Artisan.Make.Notification"
                     class="laravel.artisan.actions.MakeNotification"
-                    text="&amp;Notification"
+                    text="_Notification"
                     description="Create a new notification class"
             />
             <separator/>
             <action
                     id="Artisan.Make.Middleware"
                     class="laravel.artisan.actions.MakeMiddleware"
-                    text="Mi&amp;ddleware"
+                    text="Mi_ddleware"
                     description="Create a new middleware file"
             />
             <action
                     id="Artisan.Make.Test"
                     class="laravel.artisan.actions.MakeTest"
-                    text="&amp;Test"
+                    text="_Test"
                     description="Create a new test class"
             />
             <action
                     id="Artisan.Make.Seeder"
                     class="laravel.artisan.actions.MakeSeeder"
-                    text="&amp;Seeder"
+                    text="_Seeder"
                     description="Create a new seeder class"
             />
         </group>

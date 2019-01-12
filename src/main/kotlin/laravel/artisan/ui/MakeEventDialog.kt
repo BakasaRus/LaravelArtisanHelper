@@ -7,6 +7,7 @@ import com.intellij.notification.Notifications
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.ValidationInfo
+import com.intellij.openapi.vfs.VirtualFileManager
 import laravel.artisan.runCommand
 
 class MakeEventDialog(private var project: Project?) : DialogWrapper(project) {
@@ -37,6 +38,7 @@ class MakeEventDialog(private var project: Project?) : DialogWrapper(project) {
         var command = "php artisan make:event --no-interaction " + eventName!!.text
         val result = command.runCommand(project?.basePath)
 
+        VirtualFileManager.getInstance().syncRefresh()
         Notifications.Bus.notify(
             Notification("laravel", "Laravel Artisan", result!!, NotificationType.INFORMATION)
         )
